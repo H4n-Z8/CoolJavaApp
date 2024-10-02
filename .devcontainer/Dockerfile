@@ -1,2 +1,2 @@
-FROM ubuntu:22
+FROM ubuntu:22.04
 
