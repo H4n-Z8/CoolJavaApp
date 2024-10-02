@@ -49,9 +49,9 @@ public class Gun {
                 this.firemode = 'b';
             break;
             case 'b':
-                if (this.model == "Colt") {
+                if (this.manufacturer == "Colt") {
                     this.firemode = 's';
-                } else if (this.model == "Kalashnikov") {
+                } else if (this.manufacturer == "Kalashnikov") {
                     this.firemode = 'a';
                 }
             break;
@@ -60,8 +60,7 @@ public class Gun {
             break;
             default:
                 //placeholder
-        }  
-        System.out.println(this.firemode);      
+        }      
     }
 
     public void shoot() {
