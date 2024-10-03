@@ -20,6 +20,7 @@ public class Gun {
     public String getModel() {
         return this.model;
     }
+    
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -29,7 +30,7 @@ public class Gun {
         System.out.println("Gun has been Reloaded");
     }
 
-     public void setFiremode(char firemode) {
+    public void setFiremode(char firemode) {
         this.firemode = firemode;  
     }
 
@@ -74,6 +75,9 @@ public class Gun {
             break;
             default:
                 System.out.println("Youre out of ammo you have to Reload !!!");
+        }
+        if (0 == this.magazine.getCurrentAmmo()) {
+            System.out.println("Youre out of ammo you have to Reload !!!");
         }
     }
 }
