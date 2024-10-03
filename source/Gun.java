@@ -20,7 +20,7 @@ public class Gun {
     public String getModel() {
         return this.model;
     }
-    
+
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -40,17 +40,15 @@ public class Gun {
                 this.firemode = 'b';
             break;
             case 'b':
-                if (this.manufacturer == "Colt") {
+                if (this.manufacturer.equals("Colt")) {
                     this.firemode = 's';
-                } else if (this.manufacturer == "Kalashnikov") {
+                } else if (this.manufacturer.equals("Kalashnikov")) {
                     this.firemode = 'a';
                 }
             break;
             case 'a':
                 this.firemode = 's';
             break;
-            default:
-                //placeholder
         }      
     }
 
@@ -73,10 +71,8 @@ public class Gun {
                 System.out.println("You have " + this.magazine.getCurrentAmmo() + " rounds left.");
                 }
             break;
-            default:
-                System.out.println("Youre out of ammo you have to Reload !!!");
         }
-        if (0 == this.magazine.getCurrentAmmo()) {
+        if (0 == (this.magazine.getCurrentAmmo())) {
             System.out.println("Youre out of ammo you have to Reload !!!");
         }
     }
